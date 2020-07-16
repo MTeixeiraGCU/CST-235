@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+      
+<body> 
+	<ui:composition template="Layouts/commonLayout.xhtml">
+	<ui:define name="content">
+			<h:form id="form">
+				First Name: <h:inputText id="firstName" value="#{user.firstName}"/>
+				    		<h:message for="firstName"/><br/>
+				Last Name:  <h:inputText id="lastName" value="#{user.lastName}"/>
+							<h:message for="lastName"/><br/>
+				<h:commandButton value="Submit" action="#{formController.onSubmit(user)}"/>
+				<h:commandButton value="Flash" action="#{formController.onFlash(user)}"/>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</body> 
+</html>

@@ -1,0 +1,37 @@
+@charset "ISO-8859-1";
+
+div.pageWrapper{
+}
+
+div.header{
+	text-align: center;
+}
+
+div.footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+div.productTable table{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+div.productTable th,td{
+	text-align: left;
+	padding: 8px;
+}
+
+div.productTable tr{
+	background-color: white;
+}
+
+div.productTable tr:hover{
+	background-color: #a0a0a0
+}
+
+div.productTable th{
+	background-color: #e8ebff;
+}
