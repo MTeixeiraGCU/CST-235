@@ -14,7 +14,7 @@ jboss/server/minimal/tmp/**/*
 jboss/server/minimal/data/**/*
 jboss/server/minimal/work/**/*
 
-/build/
+*/build/*
 
 # deployed package files #
 
