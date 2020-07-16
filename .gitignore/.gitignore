@@ -1,3 +1,4 @@
+# Jboss ignore files #
 jboss/server/all/deploy/project.ext
 jboss/server/default/deploy/project.ext
 jboss/server/minimal/deploy/project.ext
@@ -14,7 +15,8 @@ jboss/server/minimal/tmp/**/*
 jboss/server/minimal/data/**/*
 jboss/server/minimal/work/**/*
 
-*/build/*
+# ignore class build files #
+*.class
 
 # deployed package files #
 
