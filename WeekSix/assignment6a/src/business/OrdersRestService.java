@@ -34,4 +34,43 @@ public class OrdersRestService {
 	public List<Order> getOrdersAsXml() {
 		return service.getOrders();
 	}
+	
+	//POST request for testing assignment
+	@POST
+	@Path("/add")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void addOrder(Order order) {
+		service.sendOrder(order);
+	}
+	
+	//example client-side method to use POST request
+	/*public void addOrder(Order order) {
+		HttpURLConnection conn = null;
+		
+		try {
+			//this is the string for the connection
+			URL url = new URL("http://localhost:8080/assignment6a/rest/orders/add");
+			
+			conn = (HttpURLConnection)url.openConnection();
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Content-Type", "application/json; utf-8");
+			conn.setRequestProperty("Accept", "text/plain");
+			conn.setDoOutput(true);
+			
+			try(OutputStream os = conn.getOutputStream()) {
+			    byte[] input = order.getJson().getBytes("utf-8");
+			    os.write(input, 0, input.length);	
+			    os.close();
+			}
+			
+			int response = conn.getResponseCode();
+			if(response != 200) {
+				throw new RuntimeException("Problem with connection - code: " + response + "\n request: " + url.toString());
+			}
+		}
+		catch(IOException ex) {
+			System.out.println("Could not connect! : " + ex.getMessage());
+		}
+		conn.disconnect();
+	}*/
 }
